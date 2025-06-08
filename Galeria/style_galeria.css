@@ -1,0 +1,118 @@
+/* Remove a formatação padrão da lista de navegação */
+nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento padrão */
+    margin: 0; /* Remove a margem padrão */
+}
+
+/* Estiliza os itens da lista de navegação */
+nav ul li {
+    display: inline; /* Exibe os itens em linha */
+    margin: 0 15px; /* Adiciona espaçamento horizontal entre os itens */
+}
+
+/* Estiliza os links da navegação */
+nav ul li a {
+    color: #fff; /* Define a cor do texto como branco */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Define o texto como negrito */
+}
+
+header {
+    background-color: #ffcccb; /* Define o fundo como rosa claro */
+    color: #fff; /* Define a cor do texto como branco */
+    padding: 1rem 0; /* Adiciona espaçamento interno vertical */
+    text-align: center; /* Centraliza o texto */
+}
+
+header h1 {
+    margin: 0; /* Remove a margem padrão */
+    font-size: 2.5rem; /* Define o tamanho da fonte */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Define a fonte como Arial */
+    line-height: 1.6; /* Define o espaçamento entre linhas */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    background-color: #f9f9f9; /* Define a cor de fundo como cinza claro */
+    color: #333; /* Define a cor do texto como cinza escuro */
+    font-size: 1rem; /* Garante o mesmo tamanho de fonte do index */
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.galeria img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+    cursor: pointer;
+    background: #fff;
+}
+
+.galeria img:hover {
+    transform: scale(1.25);
+    z-index: 2;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .galeria img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    .galeria {
+        gap: 8px;
+    }
+    .galeria img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .galeria {
+        flex-direction: column;
+        align-items: center;
+    }
+    .galeria img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+footer {
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 0; /* Adiciona espaçamento interno vertical */
+    background-color: #333; /* Define o fundo como cinza escuro */
+    color: #fff; /* Define a cor do texto como branco */
+    font-size: 0.9rem; /* Define o tamanho da fonte como menor */
+}

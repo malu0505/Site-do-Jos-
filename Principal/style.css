@@ -1,0 +1,130 @@
+/* Define a fonte padrão, espaçamento entre linhas, margens e preenchimentos iniciais, cor de fundo e cor do texto */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte como Arial */
+    line-height: 1.6; /* Define o espaçamento entre linhas */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    background-color: #f9f9f9; /* Define a cor de fundo como cinza claro */
+    color: #333; /* Define a cor do texto como cinza escuro */
+}
+
+/* Estiliza o cabeçalho */
+header {
+    background-color: #ffcccb; /* Define o fundo como rosa claro */
+    color: #fff; /* Define a cor do texto como branco */
+    padding: 1rem 0; /* Adiciona espaçamento interno vertical */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estiliza o título principal no cabeçalho */
+header h1 {
+    margin: 0; /* Remove a margem padrão */
+    font-size: 2.5rem; /* Define o tamanho da fonte */
+}
+
+/* Remove a formatação padrão da lista de navegação */
+nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento padrão */
+    margin: 0; /* Remove a margem padrão */
+}
+
+/* Estiliza os itens da lista de navegação */
+nav ul li {
+    display: inline; /* Exibe os itens em linha */
+    margin: 0 15px; /* Adiciona espaçamento horizontal entre os itens */
+}
+
+/* Estiliza os links da navegação */
+nav ul li a {
+    color: #fff; /* Define a cor do texto como branco */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Define o texto como negrito */
+}
+
+/* Adiciona espaçamento interno ao conteúdo principal */
+main {
+    padding: 20px; /* Adiciona preenchimento ao redor do conteúdo */
+}
+
+/* Adiciona espaçamento entre as seções */
+section {
+    margin-bottom: 30px; /* Adiciona margem inferior às seções */
+}
+
+/* Estiliza os títulos das seções */
+section h2 {
+    color: #ff6347; /* Define a cor do texto como vermelho tomate */
+    border-bottom: 2px solid #ffcccb; /* Adiciona uma borda inferior rosa claro */
+    padding-bottom: 5px; /* Adiciona preenchimento abaixo do texto */
+    margin-bottom: 15px; /* Adiciona margem inferior ao título */
+}
+
+/* Estiliza a galeria de imagens */
+.galeria {
+    display: flex; /* Define o layout como flexível */
+    gap: 15px; /* Adiciona espaçamento entre os itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os itens na galeria */
+}
+
+/* Estiliza as imagens da galeria */
+.galeria img {
+    width: 200px; /* Define a largura das imagens */
+    height: auto; /* Mantém a proporção das imagens */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave ao efeito de zoom */
+}
+
+/* Adiciona um efeito de zoom ao passar o mouse sobre as imagens */
+.galeria img:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+}
+
+/* Estiliza o rodapé */
+footer {
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 0; /* Adiciona espaçamento interno vertical */
+    background-color: #333; /* Define o fundo como cinza escuro */
+    color: #fff; /* Define a cor do texto como branco */
+    font-size: 0.9rem; /* Define o tamanho da fonte como menor */
+}
+
+/* Estilos gerais já existentes... */
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Reduz o tamanho do título no cabeçalho */
+    }
+
+    nav ul li {
+        display: block; /* Exibe os itens da navegação em blocos */
+        margin: 10px 0; /* Adiciona espaçamento vertical entre os itens */
+    }
+
+    .galeria img {
+        width: 150px; /* Reduz a largura das imagens na galeria */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte geral */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Reduz ainda mais o tamanho do título */
+    }
+
+    .galeria {
+        flex-direction: column; /* Exibe as imagens em uma única coluna */
+        align-items: center; /* Centraliza as imagens */
+    }
+
+    .galeria img {
+        width: 100%; /* Faz as imagens ocuparem toda a largura disponível */
+        max-width: 300px; /* Define um limite máximo para a largura */
+    }
+}
